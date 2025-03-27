@@ -39,8 +39,6 @@ st.markdown("""
         border-radius: 4px;
         padding: 10px 24px;
         font-weight: bold;
-    }
-    .category-btn {
         margin-right: 5px;
         margin-bottom: 5px;
     }
@@ -143,7 +141,7 @@ author_mapping = {
 }
 
 with col1:
-    if st.button("Motivation", key="cat1", class_name="category-btn"):
+    if st.button("Motivation", key="cat1"):
         filtered_quotes = [q for q in quotes if "Tony Robbins" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
@@ -152,7 +150,7 @@ with col1:
                 "author": random_quote.get("author", "Unknown").replace(", type.fit", ""),
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
-    if st.button("Success", key="cat2", class_name="category-btn"):
+    if st.button("Success", key="cat2"):
         filtered_quotes = [q for q in quotes if "Zig Ziglar" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
@@ -163,7 +161,7 @@ with col1:
             }
 
 with col2:
-    if st.button("Life", key="cat3", class_name="category-btn"):
+    if st.button("Life", key="cat3"):
         filtered_quotes = [q for q in quotes if "John Lennon" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
@@ -172,7 +170,7 @@ with col2:
                 "author": random_quote.get("author", "Unknown").replace(", type.fit", ""),
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
-    if st.button("Wisdom", key="cat4", class_name="category-btn"):
+    if st.button("Wisdom", key="cat4"):
         filtered_quotes = [q for q in quotes if "Einstein" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
@@ -183,7 +181,7 @@ with col2:
             }
 
 with col3:
-    if st.button("Leadership", key="cat5", class_name="category-btn"):
+    if st.button("Leadership", key="cat5"):
         filtered_quotes = [q for q in quotes if "Simon Sinek" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
@@ -192,7 +190,7 @@ with col3:
                 "author": random_quote.get("author", "Unknown").replace(", type.fit", ""),
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
-    if st.button("Happiness", key="cat6", class_name="category-btn"):
+    if st.button("Happiness", key="cat6"):
         filtered_quotes = [q for q in quotes if "Dalai Lama" in q.get("author", "")]
         if filtered_quotes:
             random_quote = random.choice(filtered_quotes)
